@@ -1,14 +1,13 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-// We will create these two pages in a moment
-import HomePage from './pages/HomePage'
-import UserPage from './pages/UserPage'
+import { Link } from 'react-router-dom'
 
-export default function App() {
-  return (
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/:id" component={UserPage} />
-      </Switch>
-  )
+export default function HomePage() {
+    return (
+        <div className="container">
+            <h1>Home Page</h1>
+            <p>
+                <Link to="/taniarascia">taniarascia</Link> on GitHub.
+            </p>
+        </div>
+    )
 }
